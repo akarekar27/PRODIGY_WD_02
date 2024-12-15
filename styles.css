@@ -1,0 +1,116 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle, #111, #000);
+    color: #fff;
+}
+
+.stopwatch-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 50px #0ff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    font-size: 2rem;
+    color: #0ff;
+    text-shadow: 0 0 10px rgb(241, 241, 241), 0 0 20px rgb(233, 240, 240), 0 0 30px rgb(233, 237, 237);
+    margin-bottom: 20px;
+}
+
+.display-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, inset 0 0 10px rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+}
+
+.display {
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.controls button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #0ff, #08f);
+    color: #000;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 15px #0ff;
+}
+
+.controls button:hover {
+    background: linear-gradient(45deg, #08f, #0ff);
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #0ff, 0 0 50px #0ff;
+}
+
+.controls button:active {
+    transform: scale(1);
+}
+
+.laps-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.laps-container h2 {
+    font-size: 1.5rem;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.laps {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0ff;
+}
+
+.laps li {
+    background: rgba(0, 0, 0, 0.7);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+    }
+    50% {
+        box-shadow: 0 0 30px #0ff, 0 0 60px #0ff;
+    }
+}
+
+.display-circle {
+    animation: glow 2s infinite;
+}
